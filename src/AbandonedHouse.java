@@ -4,6 +4,7 @@ public class AbandonedHouse extends Location {
 
     @Override
     public void printDescription() {
+        System.out.println("***********************************************");
         if (boxUsed) {
             System.out.println("There is nothing left you here...");
         } else {
@@ -12,6 +13,7 @@ public class AbandonedHouse extends Location {
             System.out.println("It's very dark inside but you managed to see the box in the corner");
             System.out.println("So you can grab the box or leave...");
         }
+        System.out.println("***********************************************");
     }
 
     private void handleBoxAction(Game game) {

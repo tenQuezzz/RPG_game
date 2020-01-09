@@ -19,6 +19,7 @@ public class Forest extends Location {
 
     @Override
     public void printDescription() {
+        System.out.println("***********************************************");
         System.out.println("You are in some unknown forrest...");
         if (mutants.isEmpty()) {
             System.out.println("You killed all mutants in this zone, there is nothing left for you here.");
@@ -31,6 +32,7 @@ public class Forest extends Location {
         }
         System.out.println("Possible actions:");
         printOptions();
+        System.out.println("***********************************************");
         System.out.println("Select your next action: ");
     }
 

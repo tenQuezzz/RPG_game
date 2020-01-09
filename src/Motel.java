@@ -22,6 +22,7 @@ public class Motel extends Location {
 
     @Override
     public void printDescription() {
+        System.out.println("***********************************************");
         System.out.println("So you entered motel...");
         if (mutants.size() != 0) {
             System.out.println("You heard some sounds coming from room nearby...");
@@ -30,6 +31,7 @@ public class Motel extends Location {
         } else {
             System.out.println("There is nothing for you left in the motel, maybe it's time to go to Gas Station");
         }
+        System.out.println("***********************************************");
     }
 
     private void handleFightAction(Game game) {

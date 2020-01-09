@@ -1,11 +1,13 @@
 public class GasStation extends Location {
     @Override
     public void printDescription() {
+        System.out.println("***********************************************");
         System.out.println("So, you are at gas station and you noticed working phone");
         System.out.println("But...");
         System.out.println("Near the phone you see very huge mutant");
         System.out.println("This must be mutant's leader...");
         System.out.println("There is only one way out...");
+        System.out.println("***********************************************");
     }
 
     @Override

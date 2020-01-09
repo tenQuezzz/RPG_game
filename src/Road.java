@@ -5,8 +5,10 @@ public class Road extends Location {
 
     @Override
     public void printDescription() {
+        System.out.println("***********************************************");
         System.out.println("You coming closer to the road and you hear noise of approaching car...");
         System.out.println("You can hide or try to stop the car");
+        System.out.println("***********************************************");
     }
 
     private void handleHidingAction(Game game) {
@@ -24,11 +26,13 @@ public class Road extends Location {
     }
 
     private void handleAdditionalAction(Game game) {
+        System.out.println("***********************************************");
         System.out.println("While walking along the road you spotted old Motel");
         System.out.println("Your possible actions:");
         System.out.println("-motel");
         System.out.println("-away (continue seeking for something else)");
         System.out.println("-status");
+        System.out.println("***********************************************");
         String choice = game.sc.nextLine();
 
         switch (choice) {
@@ -51,10 +55,12 @@ public class Road extends Location {
     }
 
     private void handleStoppingAction(Game game) {
+        System.out.println("***********************************************");
         System.out.println("You're trying to stop the car...");
         System.out.println("But seeing you driver thought that you are one of the mutants");
         System.out.println("So he/she(we don't know) increased speed and killed you...");
         System.out.println("Game over");
+        System.out.println("***********************************************");
         game.getCharacter().setStamina(0);
     }
 
