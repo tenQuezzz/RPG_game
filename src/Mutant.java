@@ -1,9 +1,9 @@
-public class AnimalMutant {
+public class Mutant {
     private int stamina;
     private int damage;
     private boolean isAlive;
 
-    AnimalMutant(int stamina, int damage) {
+    Mutant(int stamina, int damage) {
         this.stamina = stamina;
         this.damage = damage;
     }

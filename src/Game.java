@@ -8,6 +8,7 @@ public class Game {
     private Hero character;
     private Location currLocation;
     public Scanner sc = new Scanner(System.in);
+    private boolean gameCompleted = false;
 
     Game() {
         System.out.print("Enter your character name: ");
@@ -25,12 +26,24 @@ public class Game {
     }
 
     public void play() {
-        while (getCharacter().isAlive()) {
+        while (getCharacter().isAlive() && !gameCompleted) {
             currLocation.handleUserAction(this);
         }
-        System.out.println("You're in unknown place...");
-        System.out.println("Probably you are already dead...");
-        System.out.println("You need to start a new game");
+        if (gameCompleted) {
+            System.out.println("You did it!!!");
+            System.out.println("You managed to get home");
+            System.out.println("Game is successfully finished");
+            System.out.println("This was only demo version");
+            System.out.println("To open full version........");
+        } else {
+            System.out.println("You're in unknown place...");
+            System.out.println("Probably you are already dead...");
+            System.out.println("You need to start a new game");
+        }
+    }
+
+    public void setGameCompleted(boolean gameCompleted) {
+        this.gameCompleted = gameCompleted;
     }
 
     public void setNewCurrentLocation(Location location) {

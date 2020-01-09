@@ -6,6 +6,7 @@ public class Sword extends Item {
 
     @Override
     public int use() {
-        return 0;
+        System.out.printf("Damaging %d with cool sword...\n", damage);
+        return damage;
     }
 }

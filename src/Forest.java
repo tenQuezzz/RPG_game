@@ -7,12 +7,12 @@ public class Forest extends Location {
     final int NUM_OF_MUTANTS = 2;
     final int MIN_DAMAGE = 5;
     final int MAX_DAMAGE = 20;
-    private List<AnimalMutant> mutants = new ArrayList<>();
+    private List<Mutant> mutants = new ArrayList<>();
 
     Forest() {
         Random damageGenerator = new Random();
         for (int i = 0; i < NUM_OF_MUTANTS; i++) {
-            mutants.add(new AnimalMutant(30,
+            mutants.add(new Mutant(30,
                     MIN_DAMAGE + damageGenerator.nextInt(MAX_DAMAGE - MIN_DAMAGE)));
         }
     }
@@ -36,7 +36,7 @@ public class Forest extends Location {
 
     public void printOptions() {
         System.out.println("-status (to print info about your character)");
-        System.out.println("-road (to go to the road)");
+        System.out.println("-road (to go to the road BUT you won't be able to come back...)");
         System.out.println("-house (to go to the abandoned house)");
         if (mutants.size() != 0) {
             System.out.println("-fight (to fight with mutants)");
